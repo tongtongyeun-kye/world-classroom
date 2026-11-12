@@ -80,6 +80,7 @@ ol.steps{margin:0;padding-left:1.2em}
 .boards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
 .boards a,.boards span{display:block;border:2px solid var(--navy);border-radius:12px;padding:12px 14px;background:#fff;text-decoration:none;font-weight:700}
 .boards span{border-style:dashed;color:#4a5665;font-weight:500}
+.notice{margin:16px 0 0;padding:12px 14px;border:1.5px dashed var(--navy);border-radius:10px;background:#fff;font-size:15px;max-width:46em}
 footer{margin-top:48px;border-top:2px solid var(--navy);background:#fff;padding:18px 0 30px;font-size:14.5px;color:#4a5665}
 @media (max-width:760px){.hero{grid-template-columns:1fr}.globe{width:96px;height:96px}.route{grid-template-columns:1fr 1fr}.route div:nth-child(2){border-right:0}.route div:nth-child(-n+2){border-bottom:2px dashed var(--navy)}.two{grid-template-columns:1fr}.q{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.route,.q{grid-template-columns:1fr}.route div{border-right:0;border-bottom:2px dashed var(--navy)}.route div:last-child{border-bottom:0}}
@@ -225,8 +226,9 @@ footer{margin-top:48px;border-top:2px solid var(--navy);background:#fff;padding:
 
 <section id="boards">
   <h2>학생 탐구 게시판</h2>
-  <p class="lead">게임마다 학생들이 조사한 내용과 서로 주고받은 질문을 볼 수 있습니다. 학생의 이름은 보이지 않게 해 두었습니다.</p>
+  <p class="lead">프로젝트마다 학생들이 조사한 내용과 서로 주고받은 질문을 볼 수 있습니다.</p>
   <div class="boards" id="boardlist"></div>
+  <p class="notice"><b>개인정보 안내</b> 게시판의 글과 그림은 학생들의 수업 활동 기록입니다. 학생의 개인정보를 보호하기 위해 게시물을 내려받거나 다른 곳에 옮겨 싣지 말아 주시고, 수업 연구와 참고 목적으로만 살펴봐 주세요.</p>
 </section>
 </main>
 
@@ -234,9 +236,9 @@ footer{margin-top:48px;border-top:2px solid var(--navy);background:#fff;padding:
 
 <script>
 // 게시판 주소: 주소가 있으면 링크로, 없으면 '준비 중'으로 보입니다.
-const BOARDS=[["마라케시",""],["이스탄불 주사위 게임",""],["로꼬라마",""],["하나비",""],["플라스틱 플래닛·푸른 바다 지킴이",""],["질문 나눔",""]];
+const BOARDS=[["문화 프로젝트","https://padlet.com/tongtongyeun/padlet-s025elthtmi2lpbs5tj2"],["경제·자원 프로젝트","https://padlet.com/tongtongyeun/padlet-s025elx4x5t7c1n7add9"],["환경 프로젝트","https://padlet.com/tongtongyeun/padlet-s025elw2ym7p0n6xl7s2"]];
 const bl=document.getElementById('boardlist');
-BOARDS.forEach(([n,u])=>{const e=document.createElement(u?'a':'span'); if(u){e.href=u;e.textContent=n+' 게시판 보기';}else{e.textContent=n+' 게시판 (준비 중)';} bl.appendChild(e);});
+BOARDS.forEach(([n,u])=>{const e=document.createElement(u?'a':'span'); if(u){e.href=u;e.textContent=n+' 탐구 게시판 보기';}else{e.textContent=n+' 게시판 (준비 중)';} bl.appendChild(e);});
 const tabs=[...document.querySelectorAll('[role=tab]')];
 function show(id){tabs.forEach(t=>{const on=t.id===id;t.setAttribute('aria-selected',on);document.getElementById(t.getAttribute('aria-controls')).hidden=!on;});try{sessionStorage.setItem('tab',id)}catch(e){}}
 tabs.forEach(t=>t.addEventListener('click',()=>show(t.id)));
