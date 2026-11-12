@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>세계를 품은 교실 자료 꾸러미</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 배치: 지구본에서 출발해 세 정거장(문화·자원·환경)을 지나는 한 줄 항로. 좌측 정렬, 넓은 본문 한 단 */
+  --paper:#f6f9fc; --ink:#1b2430; --navy:#1f3a5f; --sea:#bfe0f5; --land:#8fd19e;
+  --culture:#dcecfb; --economy:#e2f5e9; --environment:#ffe6ec; --sun:#ffe9a8; --line:#c9d6e2; --rose:#b5304a;
+  --display:'Gowun Dodum','Noto Sans KR',sans-serif; --body:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.75;word-break:keep-all}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a{color:var(--navy)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{background:#fff;border-bottom:2px solid var(--navy)}
+.hero{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;padding:36px 0 30px}
+.globe{width:150px;height:150px;border-radius:50%;background:var(--sea);border:4px solid var(--navy);position:relative;overflow:hidden}
+.globe i{position:absolute;background:var(--land);border-radius:50%}
+.globe i:nth-child(1){left:18%;top:20%;width:42%;height:30%}.globe i:nth-child(2){left:30%;top:42%;width:22%;height:40%}
+.globe i:nth-child(3){left:62%;top:30%;width:36%;height:26%}.globe i:nth-child(4){left:70%;top:58%;width:20%;height:20%}.globe i:nth-child(5){left:4%;top:64%;width:20%;height:16%}
+h1{font-family:var(--display);font-size:clamp(30px,5vw,46px);line-height:1.25;margin:0 0 8px;color:var(--navy);text-wrap:balance}
+.sub{margin:0;font-size:18px;max-width:38em}
+nav{position:sticky;top:0;background:var(--navy);z-index:5}
+nav .wrap{display:flex;gap:6px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+nav a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:999px;font-size:15px}
+nav a:hover{background:rgba(255,255,255,.18)}
+section{padding:44px 0 8px}
+h2{font-family:var(--display);font-size:28px;color:var(--navy);margin:0 0 6px;text-wrap:balance}
+h3{font-size:19px;margin:0 0 6px}
+.lead{max-width:40em;margin:0 0 20px}
+.route{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--navy);border-radius:14px;overflow:hidden;background:#fff}
+.route div{padding:16px 16px 18px;border-right:2px dashed var(--navy)}
+.route div:last-child{border-right:0}
+.route b.l{display:inline-block;font-family:var(--display);font-size:34px;color:var(--navy);line-height:1;margin-right:8px}
+.route span.en{color:var(--rose);font-weight:700;font-size:14px;letter-spacing:.04em}
+.route p{margin:8px 0 0;font-size:15.5px;line-height:1.6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.tabs button{font:inherit;font-weight:700;border:2px solid var(--navy);background:#fff;color:var(--navy);padding:9px 16px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--navy);color:#fff}
+.panel{border:2px solid var(--navy);border-radius:14px;padding:22px;background:#fff}
+.panel[data-k="culture"]{background:linear-gradient(var(--culture) 0 96px,#fff 96px)}
+.panel[data-k="economy"]{background:linear-gradient(var(--economy) 0 96px,#fff 96px)}
+.panel[data-k="environment"]{background:linear-gradient(var(--environment) 0 96px,#fff 96px)}
+.panel h3{font-family:var(--display);font-size:25px;color:var(--navy)}
+.meta{margin:0 0 18px;font-size:15.5px}
+.games{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:0 0 20px}
+.game{border:1.5px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.game img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.game div{padding:10px 12px 12px}
+.game b{display:block}
+.game span{font-size:14.5px;line-height:1.55;display:block}
+table{border-collapse:collapse;width:100%;font-size:15.5px}
+.scroll{overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff;font-weight:700;white-space:nowrap}
+td:first-child{font-weight:700;white-space:nowrap}
+blockquote{margin:14px 0 0;padding:10px 14px;border-left:5px solid var(--navy);background:var(--paper);font-size:15.5px}
+blockquote small{display:block;color:#4a5665}
+figure{margin:18px 0 0}
+figure img{max-width:100%;border:1.5px solid var(--line);border-radius:10px;display:block}
+figcaption{font-size:14px;color:#4a5665;margin-top:4px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{border:2px solid var(--navy);border-radius:14px;padding:18px 20px;background:#fff}
+.q{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.q div{border:2px solid var(--navy);border-radius:12px;padding:14px;background:#fff}
+.q div:nth-child(1){background:var(--culture)}.q div:nth-child(2){background:var(--economy)}.q div:nth-child(3){background:var(--sun)}.q div:nth-child(4){background:var(--environment)}
+.q b{font-family:var(--display);font-size:20px;color:var(--navy);display:block}
+.q p{margin:4px 0 8px;font-size:15px;line-height:1.55}
+.q em{font-style:normal;font-size:14.5px;display:block;border-top:1px dashed var(--navy);padding-top:8px}
+ol.steps{margin:0;padding-left:1.2em}
+.boards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.boards a,.boards span{display:block;border:2px solid var(--navy);border-radius:12px;padding:12px 14px;background:#fff;text-decoration:none;font-weight:700}
+.boards span{border-style:dashed;color:#4a5665;font-weight:500}
+footer{margin-top:48px;border-top:2px solid var(--navy);background:#fff;padding:18px 0 30px;font-size:14.5px;color:#4a5665}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.globe{width:96px;height:96px}.route{grid-template-columns:1fr 1fr}.route div:nth-child(2){border-right:0}.route div:nth-child(-n+2){border-bottom:2px dashed var(--navy)}.two{grid-template-columns:1fr}.q{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.route,.q{grid-template-columns:1fr}.route div{border-right:0;border-bottom:2px dashed var(--navy)}.route div:last-child{border-bottom:0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap hero">
+  <div class="globe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div>
+    <h1>세계를 품은 교실 자료 꾸러미</h1>
+    <p class="sub">보드게임 경험을 질문과 탐구로 잇는 초등 6학년 사회과 수업 자료입니다. 수업 흐름, 프로젝트별 게임과 활동, 질문 틀, 꼬마 선생님 운영 방법을 그대로 가져다 쓸 수 있습니다.</p>
+  </div>
+</div></header>
+<nav aria-label="바로 가기"><div class="wrap">
+  <a href="#flow">수업 흐름</a><a href="#projects">세 프로젝트</a><a href="#questions">질문 틀</a><a href="#helpers">꼬마 선생님</a><a href="#apply">우리 반에 쓰기</a><a href="#boards">탐구 게시판</a>
+</div></nav>
+
+<main class="wrap">
+<section id="flow">
+  <h2>G.A.M.E. 수업 흐름</h2>
+  <p class="lead">게임을 하는 데서 끝내지 않고, 게임에서 겪은 일을 교과의 배움으로 옮기는 네 단계입니다. 프로젝트마다 이 흐름을 한 번씩 돕니다.</p>
+  <div class="route">
+    <div><b class="l">G</b><span class="en">GAME</span><p>게임으로 경험하고 선택합니다. 구성물과 규칙에서 배울 거리를 찾습니다.</p></div>
+    <div><b class="l">A</b><span class="en">ASK</span><p>겪은 일에서 질문을 만들고 조사합니다. 친구의 글에 질문을 달고 답합니다.</p></div>
+    <div><b class="l">M</b><span class="en">MATCH</span><p>게임과 실제 세계를 견줍니다. 게임 속 모습을 그대로 믿지 않도록 확인합니다.</p></div>
+    <div><b class="l">E</b><span class="en">ENACT</span><p>달라진 생각을 선택과 행동으로 옮겨 약속을 남깁니다.</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>P.A.C.T. 세 프로젝트</h2>
+  <p class="lead">pact는 약속이라는 뜻입니다. 프로젝트마다 학생들이 세계와 맺는 약속 하나를 산출물로 남깁니다. 전체 38차시 가운데 28차시가 사회 시간입니다.</p>
+  <div class="tabs" role="tablist" aria-label="프로젝트 고르기">
+    <button role="tab" id="t-culture" aria-controls="p-culture" aria-selected="true">P 문화</button>
+    <button role="tab" id="t-economy" aria-controls="p-economy" aria-selected="false">A 경제·자원</button>
+    <button role="tab" id="t-environment" aria-controls="p-environment" aria-selected="false">T 환경</button>
+  </div>
+
+  <div class="panel" data-k="culture" id="p-culture" role="tabpanel" aria-labelledby="t-culture">
+    <h3>다름을 이해하다</h3>
+    <p class="meta">다른 관점 존중 (Perspective) · 13차시 · [6사09-02] [6사10-01] [6사10-02] · 남기는 약속: 세계 문화 탐구 지도</p>
+    <div class="games">
+      <div class="game"><img src="img/g_mara.jpg" alt="마라케시 게임판에 양탄자를 놓는 손"><div><b>마라케시</b><span>시장에서 양탄자를 펼치는 상인. 동전, 양탄자, 상인 말에서 모로코 문화를 찾습니다.</span></div></div>
+      <div class="game"><img src="img/g_ist.jpg" alt="이스탄불 주사위 게임을 하는 모둠"><div><b>이스탄불 주사위 게임</b><span>돈과 상품을 모아 루비를 얻는 상인. 두 대륙을 잇는 위치와 상업을 잇습니다.</span></div></div>
+      <div class="game"><img src="img/g_loco.jpg" alt="로꼬라마 카드를 든 손"><div><b>로꼬라마</b><span>카드 그림에 담긴 라마, 옷, 모자, 유물로 고산 지역의 생활을 만납니다.</span></div></div>
+      <div class="game"><img src="img/g_hana.jpg" alt="하나비 카드를 세워 둔 책상"><div><b>하나비</b><span>힌트를 주고받아 불꽃놀이를 함께 완성. 일본의 기후와 축제를 조사합니다.</span></div></div>
+    </div>
+    <div class="scroll"><table>
+      <tr><th>단계</th><th>차시</th><th>학생 활동</th></tr>
+      <tr><td>G</td><td>1~6</td><td>게임 익히기와 하기. 구성물에서 그 지역의 문화를 한 사람이 하나씩 찾기</td></tr>
+      <tr><td>A</td><td>7~9</td><td>찾은 것을 조사해 게시판에 올리고, 친구 글에 질문하고 답하기</td></tr>
+      <tr><td>M</td><td>10~11</td><td>게임과 실제를 견주고 우리나라와 비교하기. 다른 까닭을 위치와 기후에서 찾기</td></tr>
+      <tr><td>E</td><td>12~13</td><td>탐구 카드를 만들어 세계지도에 붙이고 이어 탐구 지도 완성하기</td></tr>
+    </table></div>
+    <blockquote>"일본 사람들한테는 유카타가 편안옷 아님니까?"<small>친구의 조사 글에 학생이 단 질문. 우리 기준으로 보던 눈이 그 문화 안의 사람의 눈으로 옮겨 간 장면입니다.</small></blockquote>
+    <figure><img src="img/cards4.jpg" alt="학생들이 만든 마라케시, 이스탄불, 로꼬라마, 일본 탐구 카드 네 장"><figcaption>학생들이 만든 세계 문화 탐구 카드</figcaption></figure>
+  </div>
+
+  <div class="panel" data-k="economy" id="p-economy" role="tabpanel" aria-labelledby="t-economy" hidden>
+    <h3>연결을 이해하다</h3>
+    <p class="meta">세계의 연결 인식 (Awareness) · 11차시 · [6사11-01] [6사11-03] · 남기는 약속: 세계 자원 배분 협약서</p>
+    <div class="games">
+      <div class="game"><img src="img/g_bean.jpg" alt="보난자 카드를 놓고 거래하는 손"><div><b>보난자</b><span>콩을 심고 친구와 교환하고 거래합니다. 교환이 왜 일어나는지 몸으로 겪습니다.</span></div></div>
+      <div class="game"><img src="img/g_catan.jpg" alt="카탄 게임판 위로 뻗은 손들"><div><b>카탄</b><span>지역마다 다른 자원을 얻고 교환합니다. 자원의 불균등과 무역을 잇습니다.</span></div></div>
+      <div class="game"><img src="img/g_sale.jpg" alt="포세일 카드와 동전"><div><b>포세일</b><span>정해진 돈으로 사고 더 높은 값에 팝니다. 가계와 기업의 합리적 선택을 잇습니다.</span></div></div>
+    </div>
+    <div class="scroll"><table>
+      <tr><th>단계</th><th>차시</th><th>학생 활동</th></tr>
+      <tr><td>G</td><td>1~4</td><td>게임 익히기와 하기. 직접 생산하고 사고팔고 교환하기</td></tr>
+      <tr><td>A</td><td>5~7</td><td>게임 경험을 자원의 한정, 가계와 기업, 무역의 개념으로 정리하기</td></tr>
+      <tr><td>M</td><td>8~9</td><td>자원이 한정된 상황에서의 선택 토론하기. 게임 속 교환을 무역과 견주기</td></tr>
+      <tr><td>E</td><td>10~11</td><td>전체 회의, 모둠별 조항 작성, 하나의 학급 협약서로 합치기, 성찰</td></tr>
+    </table></div>
+    <blockquote>"자원이 어떤 사람은 많고 어떤 사람은 적으니 힘들었다. 그때 다른 사람과 협상을 하니 자원 문제가 없어졌다"<small>카탄을 한 뒤 학생이 쓴 후기</small></blockquote>
+    <div class="two" style="margin-top:18px">
+      <figure style="margin:0"><img src="img/pact_wall.jpg" alt="벽에 붙인 세계 자원 배분 협약서"><figcaption>지구촌이 함께 만드는 세계 자원 배분 협약서</figcaption></figure>
+      <div><h3>협약서의 짜임</h3><ol class="steps"><li>우리가 발견한 문제</li><li>자원은 어떻게 분포할까 (세계지도에 표시)</li><li>우리가 정한 원칙: 공정성, 지속 가능성, 상호 존중, 공동의 책임</li><li>조항 쓰기</li><li>우리가 약속할 실천</li><li>나라를 하나씩 맡아 서명</li></ol>
+      <h3 style="margin-top:14px">성찰 질문</h3><ol class="steps"><li>우리 모둠은 어떤 기준으로 자원을 나누기로 했나요?</li><li>다른 나라의 입장을 듣고 생각이 달라진 부분이 있나요?</li><li>우리 협약이 실제로 적용된다면 어떤 문제가 생길 수 있을까요?</li></ol></div>
+    </div>
+  </div>
+
+  <div class="panel" data-k="environment" id="p-environment" role="tabpanel" aria-labelledby="t-environment" hidden>
+    <h3>책임 있게 행동하다</h3>
+    <p class="meta">책임 있는 실천 (Taking action) · 14차시 · [6사12-02] · 남기는 약속: 우리 반 환경 보호 약속</p>
+    <div class="games">
+      <div class="game"><img src="img/g_pla.jpg" alt="플라스틱 플래닛 게임판"><div><b>플라스틱 플래닛</b><span>함께 플라스틱을 치우고 바다 동물을 구하는 협력 게임입니다.</span></div></div>
+      <div class="game"><img src="img/g_sea.jpg" alt="푸른 바다 지킴이 게임판 위의 손"><div><b>푸른 바다 지킴이</b><span>의논하여 쓰레기가 섬을 채우지 않게 막는 협력 게임입니다.</span></div></div>
+      <div class="game"><img src="img/route.jpg" alt="학생이 그린 플라스틱 이동 경로 지도"><div><b>이동 경로 지도</b><span>버려진 플라스틱이 바다로 가는 길을 조사해 그립니다.</span></div></div>
+    </div>
+    <div class="scroll"><table>
+      <tr><th>단계</th><th>차시</th><th>학생 활동</th></tr>
+      <tr><td>G</td><td>1~3</td><td>협력 게임 익히기와 하기. 게임을 분석하고 규칙을 바꾸어 보며 까닭 설명하기</td></tr>
+      <tr><td>A</td><td>4~7</td><td>플라스틱의 이동 경로, 피해 지역, 실제 사례 기사 조사하기. 네 유형 질문 만들기</td></tr>
+      <tr><td>M</td><td>8~12</td><td>게임 카드로 이야기 이어 쓰기. 지구촌 플라스틱 정상회의(생산국, 기업, 환경 단체, 피해 지역)</td></tr>
+      <tr><td>E</td><td>13~14</td><td>포스터를 만들어 교실 분리배출함 위에 붙이기</td></tr>
+    </table></div>
+    <blockquote>"세계 플라스틱의 날이나 식목일 같은 환경과 관련된 날이 추가되면 좋겠다."<small>환경 토론 뒤 학생이 쓴 후기. 개인의 실천을 넘어 제도를 제안했습니다.</small></blockquote>
+    <figure><img src="img/posters3.jpg" alt="학생들이 만든 플라스틱 줄이기 포스터 세 장"><figcaption>학생들이 만든 실천 포스터. 가운데 포스터에 '우리 반 환경 보호 약속' 네 가지가 있습니다.</figcaption></figure>
+  </div>
+</section>
+
+<section id="questions">
+  <h2>네 가지 질문 틀</h2>
+  <p class="lead">질문을 만들어 본 적이 없는 학생에게는 재료와 틀을 함께 줍니다. 재료는 게임에서 겪은 일이고, 틀은 아래 네 가지입니다. 아래 보기는 환경 프로젝트에서 한 모둠이 스스로 만든 질문입니다.</p>
+  <div class="q">
+    <div><b>사실적 질문</b><p>찾으면 답을 알 수 있는 질문</p><em>"해양오염을 막기 위해 우리는 무엇을 할 수 있나요?"</em></div>
+    <div><b>개념적 질문</b><p>까닭과 관계를 묻는 질문</p><em>"쓰레기를 길에 버리는 게 환경과 무슨 관계과 있을까?"</em></div>
+    <div><b>논쟁적 질문</b><p>생각이 다를 수 있는 질문</p><em>"캠패인,쓰레기줍기,다회용 사용하기 등 에서 어떤 행동이 가장 타당할까요?"</em></div>
+    <div><b>성찰적 질문</b><p>나를 돌아보는 질문</p><em>"고통받는 바다동물들을 보고 난 무엇을 느끼고 배웠나요?"</em></div>
+  </div>
+</section>
+
+<section id="helpers">
+  <h2>보드게임 꼬마 선생님</h2>
+  <div class="two">
+    <div class="card"><p style="margin-top:0">보드게임 수업의 걸림돌은 규칙 설명에 드는 시간과, 규칙을 이해하지 못한 학생이 게임에서 밀려나는 일입니다. 게임마다 두세 명을 꼬마 선생님으로 정하면 둘 다 줄어듭니다.</p>
+      <ol class="steps"><li><b>먼저 해 보기</b> 맡은 게임을 수업 전에 미리 연구합니다.</li><li><b>쉬운 규칙 쓰기</b> 설명서를 친구가 알기 쉬운 말로 다시 씁니다.</li><li><b>친구 돕기</b> 규칙을 설명하고 어려워하는 친구를 돕습니다.</li></ol>
+      <blockquote>"주사위를 던져 루비 6개를 먼저 모으는 게임"<small>꼬마 선생님이 이스탄불 주사위 게임을 한 문장으로 줄인 것</small></blockquote></div>
+    <figure style="margin:0"><img src="img/kid.jpg" alt="꼬마 선생님이 손으로 쓴 규칙 안내 자료"><figcaption>꼬마 선생님이 쓴 쉬운 규칙 안내</figcaption></figure>
+  </div>
+</section>
+
+<section id="apply">
+  <h2>우리 반에 쓰기</h2>
+  <p class="lead">전부를 그대로 할 필요는 없습니다. 여건에 맞춰 일부부터 시작할 수 있습니다.</p>
+  <div class="scroll"><table>
+    <tr><th>여건</th><th>적용 방안</th></tr>
+    <tr><td>시수가 부족한 학급</td><td>프로젝트마다 게임 하나만 골라 G, A, M, E를 한 번 돌립니다.</td></tr>
+    <tr><td>학생 수가 많은 학급</td><td>모둠별로 다른 게임을 하고 서로 소개합니다.</td></tr>
+    <tr><td>규칙이 어려운 게임</td><td>꼬마 선생님이 쉬운 규칙 안내를 만들고 모둠마다 배치합니다.</td></tr>
+    <tr><td>경험이 적은 학급</td><td>'구성물에서 문화 찾기'로 시작하고 조사 항목을 틀로 줍니다.</td></tr>
+  </table></div>
+  <h3 style="margin-top:26px">다른 학년에서</h3>
+  <div class="scroll"><table>
+    <tr><th>학년</th><th>성취기준</th><th>보드게임과 적용</th></tr>
+    <tr><td>3~4</td><td>[4사03-02] 다른 문화를 존중하는 태도</td><td>하나비, 마라케시: 구성물 찾기에서 한 가지 조사로</td></tr>
+    <tr><td>3~4</td><td>[4사07-01] 희소성과 합리적 선택</td><td>포세일: 무엇을 살지 선택하고 까닭 말하기</td></tr>
+    <tr><td>3~4</td><td>[4사07-02] 생산·소비와 상호의존</td><td>보난자: 교환 경험에서 지역 간 교류로</td></tr>
+    <tr><td>3~4</td><td>[4사09-01] 생활 주변의 문제 해결</td><td>푸른 바다 지킴이에서 우리 학교의 쓰레기 문제로</td></tr>
+    <tr><td>5</td><td>[6사02-01] 기후변화와 자연재해</td><td>환경 게임에서 우리나라의 기후변화 사례로</td></tr>
+  </table></div>
+</section>
+
+<section id="boards">
+  <h2>학생 탐구 게시판</h2>
+  <p class="lead">게임마다 학생들이 조사한 내용과 서로 주고받은 질문을 볼 수 있습니다. 학생의 이름은 보이지 않게 해 두었습니다.</p>
+  <div class="boards" id="boardlist"></div>
+</section>
+</main>
+
+<footer><div class="wrap">초등 6학년 사회과 수업 실천 자료입니다. 수업에 자유롭게 쓰실 수 있습니다. 보드게임의 이름과 구성물은 각 제작사의 것입니다.</div></footer>
+
+<script>
+// 게시판 주소: 주소가 있으면 링크로, 없으면 '준비 중'으로 보입니다.
+const BOARDS=[["마라케시",""],["이스탄불 주사위 게임",""],["로꼬라마",""],["하나비",""],["플라스틱 플래닛·푸른 바다 지킴이",""],["질문 나눔",""]];
+const bl=document.getElementById('boardlist');
+BOARDS.forEach(([n,u])=>{const e=document.createElement(u?'a':'span'); if(u){e.href=u;e.textContent=n+' 게시판 보기';}else{e.textContent=n+' 게시판 (준비 중)';} bl.appendChild(e);});
+const tabs=[...document.querySelectorAll('[role=tab]')];
+function show(id){tabs.forEach(t=>{const on=t.id===id;t.setAttribute('aria-selected',on);document.getElementById(t.getAttribute('aria-controls')).hidden=!on;});try{sessionStorage.setItem('tab',id)}catch(e){}}
+tabs.forEach(t=>t.addEventListener('click',()=>show(t.id)));
+try{const s=sessionStorage.getItem('tab'); if(s&&document.getElementById(s)) show(s);}catch(e){}
+</script>
+</body>
+</html>
