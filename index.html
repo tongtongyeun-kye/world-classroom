@@ -84,6 +84,41 @@ ol.steps{margin:0;padding-left:1.2em}
 footer{margin-top:48px;border-top:2px solid var(--navy);background:#fff;padding:18px 0 30px;font-size:14.5px;color:#4a5665}
 @media (max-width:760px){.hero{grid-template-columns:1fr}.globe{width:96px;height:96px}.route{grid-template-columns:1fr 1fr}.route div:nth-child(2){border-right:0}.route div:nth-child(-n+2){border-bottom:2px dashed var(--navy)}.two{grid-template-columns:1fr}.q{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.route,.q{grid-template-columns:1fr}.route div{border-right:0;border-bottom:2px dashed var(--navy)}.route div:last-child{border-bottom:0}}
+
+.lp h3.sec{font-family:var(--display);font-size:23px;color:var(--navy);margin:34px 0 10px;padding-top:6px}
+.lp h4{font-size:19px;margin:30px 0 10px;padding:10px 14px;background:var(--navy);color:#fff;border-radius:10px}
+.lp h5{font-size:17px;margin:22px 0 4px;color:var(--navy)}
+.lp p{margin:0 0 12px;max-width:46em}
+.lp p.item{padding-left:1.6em;text-indent:-1.6em}
+.lp table{margin:0 0 18px;background:#fff}
+.lp table.kv th{background:var(--paper);color:var(--navy);white-space:nowrap;width:1%}
+.lp table.proc td:first-child,.lp table.proc td:nth-child(4){text-align:center;white-space:nowrap}
+.lp table.proc td:nth-child(2){font-weight:500;white-space:normal}
+.lp table td:first-child{font-weight:700;white-space:normal}
+.lp table.plain td:first-child{min-width:7em}
+.lp table.proc td:first-child{white-space:nowrap}
+.lp h4,section,.panel{scroll-margin-top:70px}
+.lp table.proc td:nth-child(3){min-width:22em}.lp table.proc td:nth-child(5){min-width:13em}
+.lp table.kv td:first-child{font-weight:400}
+.lp td span{display:block}
+.lp td span.act{font-weight:700;margin-top:6px}.lp td span.act:first-child{margin-top:0}
+.lp td span.li{padding-left:1em;text-indent:-.8em}.lp td span.li:before{content:"- "}
+.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:8px 0 22px}
+.photos figure{margin:0}.photos img{width:100%;aspect-ratio:4/3;object-fit:cover}
+figure.post img{width:100%}
+.notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:14px 0 18px}
+.note{background:#fff8c9;border:1.5px solid #e9d97a;border-radius:6px;padding:14px 16px;box-shadow:2px 3px 0 rgba(31,58,95,.12)}
+.note b{display:block;color:var(--navy);font-size:15px}
+.note p{margin:6px 0 0;font-size:15.5px;line-height:1.7}
+p.read{background:#fff;border:2px solid var(--navy);border-radius:12px;padding:14px 18px;max-width:none}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+.toc a{border:1.5px solid var(--navy);border-radius:999px;padding:4px 12px;font-size:14.5px;text-decoration:none;background:#fff}
+.dls{display:flex;flex-wrap:wrap;gap:8px}
+.dl{display:inline-block;margin:8px 6px 0 0;padding:10px 18px;border-radius:999px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700}
+.rv-group{margin:0 0 34px}
+.rv-group h3{font-family:var(--display);font-size:23px;color:var(--navy)}
+.pdesc{font-size:15.5px;color:#4a5665;margin:0 0 6px}
+@media print{nav,.tabs,.dl{display:none}.panel[hidden]{display:block!important}}
 </style>
 </head>
 <body>
@@ -95,7 +130,7 @@ footer{margin-top:48px;border-top:2px solid var(--navy);background:#fff;padding:
   </div>
 </div></header>
 <nav aria-label="바로 가기"><div class="wrap">
-  <a href="#flow">수업 흐름</a><a href="#projects">세 프로젝트</a><a href="#questions">질문 틀</a><a href="#helpers">꼬마 선생님</a><a href="#apply">우리 반에 쓰기</a><a href="#boards">탐구 게시판</a>
+  <a href="#flow">수업 흐름</a><a href="#projects">세 프로젝트</a><a href="#questions">질문 틀</a><a href="#helpers">꼬마 선생님</a><a href="#apply">우리 반에 쓰기</a><a href="#lessons">수업 과정안</a><a href="#reviews">학생 후기</a><a href="#boards">탐구 게시판</a>
 </div></nav>
 
 <main class="wrap">
@@ -222,6 +257,37 @@ footer{margin-top:48px;border-top:2px solid var(--navy);background:#fff;padding:
     <tr><td>3~4</td><td>[4사09-01] 생활 주변의 문제 해결</td><td>푸른 바다 지킴이에서 우리 학교의 쓰레기 문제로</td></tr>
     <tr><td>5</td><td>[6사02-01] 기후변화와 자연재해</td><td>환경 게임에서 우리나라의 기후변화 사례로</td></tr>
   </table></div>
+</section>
+
+<section id="lessons">
+  <h2>프로젝트별 교수·학습 과정안</h2>
+  <p class="lead">세 프로젝트마다 G·A·M·E 단계별 본 차시 과정안 4개를 실었습니다. 개관, 재구성 계획, 평가계획, 학습활동 스케치까지 함께 볼 수 있습니다.</p>
+  <div class="boards"><a href="lessons.html#p-culture">P 문화 프로젝트 과정안</a><a href="lessons.html#p-economy">A 경제·자원 프로젝트 과정안</a><a href="lessons.html#p-environment">T 환경 프로젝트 과정안</a></div>
+  <p style="margin:14px 0 4px">프로젝트별 과정안을 한글 파일(hwpx)로 내려받을 수 있습니다.</p><div class="dls"><a class="dl" href="files/lesson-plan-culture.hwpx" download>문화(P) 과정안 내려받기</a> <a class="dl" href="files/lesson-plan-economy.hwpx" download>경제·자원(A) 과정안 내려받기</a> <a class="dl" href="files/lesson-plan-environment.hwpx" download>환경(T) 과정안 내려받기</a></div>
+</section>
+
+<section id="reviews">
+  <h2>학생 후기</h2>
+  <p class="lead">게임이 끝날 때마다 학생 전원이 붙임쪽지에 후기를 써서 게임별 후기 게시판에 붙였습니다. 맞춤법은 고치지 않고 원문 그대로 옮겼으며, 이름은 가리고 학생1, 학생2처럼 표시했습니다. 사진을 누르면 크게 볼 수 있습니다.</p>
+  <div class="rv-group">
+    <h3>P 문화 · 다름을 이해하다</h3>
+    <figure class="post"><a href="img/lp/post_mara.jpg"><img src="img/lp/post_mara.jpg" alt="마라케시 후기 붙임쪽지. 학생들이 손글씨로 쓴 붙임쪽지 여덟 장" loading="lazy"></a><figcaption>마라케시 후기 붙임쪽지</figcaption></figure><figure class="post"><a href="img/lp/post_ist.jpg"><img src="img/lp/post_ist.jpg" alt="이스탄불 후기 붙임쪽지. 학생들이 손글씨로 쓴 붙임쪽지 여덟 장" loading="lazy"></a><figcaption>이스탄불 후기 붙임쪽지</figcaption></figure><figure class="post"><a href="img/lp/post_hana.jpg"><img src="img/lp/post_hana.jpg" alt="하나비 후기 붙임쪽지. 학생들이 손글씨로 쓴 붙임쪽지 여덟 장" loading="lazy"></a><figcaption>하나비 후기 붙임쪽지</figcaption></figure>
+    <div class="notes"><div class="note"><b>학생1</b><p>마라케시를 플레이하면서 모로코의 기후, 양탄자 문화, 시장 문화에 대해 잘 알 수 있었다. … 조사학습을 하면서는 궁금한 점을 찾아서 좋았다.</p></div><div class="note"><b>학생2</b><p>원래는 고산 기후 특징을 잘 몰랐는데 로꼬라마를 통해 라마, 알파카, 전통모자, 선인장 등등 알게 되었다.</p></div><div class="note"><b>학생3</b><p>하나비 게임을 하고 신기했던 점은 불꽃축제가 7~8월에만 개최된다는 것이고 조사하면서 신기한 점은 일본 기모노와 유카타가 같은 것이 아니라는게 신기했다.</p></div><div class="note"><b>학생4</b><p>마라케시를 하고 마라케시의 광장의 문화 등을 알게 되었고 … 마라케시의 문화 다양성을 알게 되어서 좋았다</p></div><div class="note"><b>학생5</b><p>실제로 하나비라는 게임을 해보았는데 일본과 한국의 차이점, 전통의상 등도 게임과 조사를 통해 더 자세히 알아보았고, 재미있어 다음에도 하고 싶다.</p></div></div>
+    <p class="read"><b>후기에서 읽은 것</b> 학생들의 후기에는 게임을 했다 → 궁금한 점이 생겼다 → 조사해서 알게 되었다는 흐름이 학생의 말로 드러난다. 몰랐던 기후와 지역을 게임으로 처음 만나고(학생2), 뭉뚱그려 보던 일본의 옷을 기모노와 유카타로 나누어 보게 되었으며(학생3), 우리나라와 견주어 차이를 찾았다(학생5). 신기하다로 시작한 관심이 조사를 거쳐 다양성이라는 말로 정리된 것(학생4)이 이 프로젝트가 기르고자 한 다른 관점 존중의 첫걸음이다.</p>
+  </div>
+<div class="rv-group">
+    <h3>A 경제·자원 · 연결을 이해하다</h3>
+    <figure class="post"><a href="img/lp/post_catan.jpg"><img src="img/lp/post_catan.jpg" alt="카탄 후기 붙임쪽지. 학생들이 손글씨로 쓴 붙임쪽지 여덟 장" loading="lazy"></a><figcaption>카탄 후기 붙임쪽지</figcaption></figure><figure class="post"><a href="img/lp/post_econ.jpg"><img src="img/lp/post_econ.jpg" alt="보난자·포세일 후기 붙임쪽지. 학생들이 손글씨로 쓴 붙임쪽지 여덟 장" loading="lazy"></a><figcaption>보난자·포세일 후기 붙임쪽지</figcaption></figure>
+    <div class="notes"><div class="note"><b>학생1</b><p>자원이 어떤 사람은 많고 어떤 사람은 적으니 힘들었다. 그때 다른 사람과 협상을 하니 자원 문제가 없어졌다</p></div><div class="note"><b>학생2</b><p>카탄을 하고 사회시간에서 배운 물물교환, 교류 등등…을 카탄으로 인해 실제로 해보아서 재밌었고 다음에도 해보고 싶다.</p></div><div class="note"><b>학생3</b><p>카탄을 하고나서 소감은 서로 협상, 거래를 하면서 공정한지 판단해보고 갈등을 잘 해결할수 있는지 생각해 보는게 좋았다</p></div><div class="note"><b>학생4</b><p>포세일과 보난자를 하면서, 많은 걸 배웠습니다. 가치와 비용… 수익 등을 새롭게 알아보았습니다.</p></div><div class="note"><b>학생5</b><p>처음에 카탄이라는 게임의 인상은 어렵고 힘든 게임이라고 생각했다. 하다보니 재밌고, 쉬운게임이라고 느꼈다.</p></div></div>
+    <p class="read"><b>후기에서 읽은 것</b> 학생들은 자원이 고르게 나뉘어 있지 않아 생긴 어려움(학생1)을 협상으로 풀고, 그 경험을 교과서의 물물교환·교류와 스스로 이었다(학생2). 거래가 공정한지 판단하고 갈등을 해결하는 일을 의식했다는 후기(학생3)는 이 프로젝트에서 함께 기르고자 한 비판적 문제 해결력을 보여 준다. 어려운 게임을 끝까지 해낸 경험(학생5)은 낯선 과제에 대한 자신감으로 이어졌다.</p>
+  </div>
+<div class="rv-group">
+    <h3>T 환경 · 책임 있게 행동하다</h3>
+    <figure class="post"><a href="img/lp/post_sea.jpg"><img src="img/lp/post_sea.jpg" alt="푸른 바다 지킴이 후기 붙임쪽지. 학생들이 손글씨로 쓴 붙임쪽지 여덟 장" loading="lazy"></a><figcaption>푸른 바다 지킴이 후기 붙임쪽지</figcaption></figure><figure class="post"><a href="img/lp/post_deb.jpg"><img src="img/lp/post_deb.jpg" alt="지구촌 플라스틱 정상회의(환경 토론) 후기 붙임쪽지. 학생들이 손글씨로 쓴 붙임쪽지 여덟 장" loading="lazy"></a><figcaption>지구촌 플라스틱 정상회의(환경 토론) 후기 붙임쪽지</figcaption></figure>
+    <div class="notes"><div class="note"><b>학생1</b><p>푸른 바다 지킴이를 하면서 일회용품 대신 다회용품을 사용해야 한다는 생각이 들었고 환경 오염을 막아야겠다는 생각이 들었다.</p></div><div class="note"><b>학생2</b><p>푸른바다 지킴이를 하면서 규칙을 바꾸며, 바다를 위해 할 수 있는 것들을 설명했습니다. 그리고 주장하는 글을 모둠원들과 작성해서 좋았습니다. 협동을 하는게 제일 재미있었습니다.</p></div><div class="note"><b>학생3</b><p>토론을 준비하면서 조사하고 입론하고, 토론, 질문을 한 것이 기억에 남았고 앞으로 우리 개인이 지구를 지키고 환경오염을 막으려면 일회용품 보다 다회용품, 비닐봉지 보다 에코백 등을 사용하면 좋을 것 같다.</p></div><div class="note"><b>학생4</b><p>나는 플라스틱을 줄이기 위해서 세계 플라스틱의 날이나 식목일 같은 환경과 관련된 날이 추가되면 좋겠다.</p></div><div class="note"><b>학생5</b><p>푸른 바다 지킴이 이야기를 쓰며 환경과 바다의 대한 소중함을 느끼고 지구를 지키고 싶어졌다</p></div></div>
+    <p class="read"><b>후기에서 읽은 것</b> 게임에서 시작한 생각(학생1)이 규칙 바꾸기와 주장하는 글(학생2), 근거를 갖춘 토론(학생3)을 거쳐 구체적인 실천으로 이어졌다. 개인의 실천을 넘어 사회가 함께하는 방법을 제안한 후기(학생4)와 이야기를 쓰며 바다의 소중함을 느낀 후기(학생5)는, 지식이 마음과 행동으로 넘어가는 책임 있는 실천의 모습을 보여 준다.</p>
+  </div>
+
 </section>
 
 <section id="boards">
